@@ -10,4 +10,8 @@ function compileSass() {
     .pipe(gulp.dest('css/'));
 }
 
-exports.sass = compileSass;
+function keepWatching() {
+  gulp.watch('css/scss/*.scss', compileSass);
+}
+
+exports.watch = keepWatching;
