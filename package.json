@@ -18,8 +18,14 @@
   "homepage": "https://github.com/aalmeida00/automacao-front-end#readme",
   "dependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-cli": "^2.3.0",
     "gulp-sass": "^4.1.0",
     "node-sass": "^6.0.0"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "last 2 versions"
+  ]
 }
