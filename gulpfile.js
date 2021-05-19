@@ -20,6 +20,7 @@ function keepWatching() {
   });
 
   gulp.watch('css/scss/*.scss', compileSass);
+  gulp.watch('*.html').on('change', browserSync.reload);
 }
 
 exports.watch = keepWatching;
