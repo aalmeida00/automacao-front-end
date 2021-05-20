@@ -34,8 +34,9 @@ function keepWatching() {
   gulp.watch('css/scss/*.scss', compileSass);
   gulp.watch('*.html').on('change', browserSync.reload);
   gulp.watch(['./js/**/*.js', '!./js/main.js'], concatJs);
+  concatJs();
+  compileSass();
 }
 
 // Exporta a função para ser chamada como gulp:watch
 exports.watch = keepWatching;
-exports.concat = concatJs;

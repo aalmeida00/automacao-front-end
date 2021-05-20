@@ -10,5 +10,5 @@
   }
 
   img.addEventListener('click', animaImg);
-  console.log(img);
+  console.log('teste');
 }
