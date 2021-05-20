@@ -4,6 +4,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
+const babel = require('gulp-babel');
 
 // Função para compilar o sass e adicionar os prefixos
 function compileSass() {
@@ -21,6 +22,11 @@ function concatJs() {
   return gulp
     .src('./js/**/*.js')
     .pipe(concat('main.js'))
+    .pipe(
+      babel({
+        presets: ['@babel/env'],
+      })
+    )
     .pipe(gulp.dest('./js/'));
 }
 
