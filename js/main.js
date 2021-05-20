@@ -1,18 +1,18 @@
 {
+  const img = document.querySelector('.modal-img');
 
-const img = document.querySelector('.modal-img');
-
-function animaImg() {
-  if(img.classList.contains('active')) {
-    img.classList.remove('active');
-  } else {
-    img.classList.add('active');
+  function animaImg() {
+    if (img.classList.contains('active')) {
+      img.classList.remove('active');
+    } else {
+      img.classList.add('active');
+    }
   }
+
+  img.addEventListener('click', animaImg);
+  console.log(img);
 }
 
-img.addEventListener('click', animaImg);
-
-}
 {
 const modalBtn = document.querySelector('.abrir-modal');
 const modal = document.querySelector('.modal');
